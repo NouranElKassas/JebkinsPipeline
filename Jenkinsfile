@@ -8,7 +8,7 @@ pipeline {
             }
             stage('Upload to AWS.') {
                 steps {
-                    withAWS(region:'us-west-2',credentials:"S3_Jenkins") {
+                    withAWS(region:'us-west-2',credentials:"AKIAS4WLB2L2ALBPQ27J") {
                         s3Upload(file:'index.html', bucket:'nouran.portfolio', path:'index.html')
                     }
 
