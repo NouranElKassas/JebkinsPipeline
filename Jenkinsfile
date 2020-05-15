@@ -9,7 +9,7 @@ pipeline {
 
     stage('Upload to AWS.') {
       steps {
-        withAWS(region: 'us-west-2', credentials: 'Nour') {
+        withAWS(region: 'us-east-2', credentials: 'Nour') {
           s3Upload(file: 'root.html', bucket: 'nouran.portfolio', path: 'root.html')
         }
 
