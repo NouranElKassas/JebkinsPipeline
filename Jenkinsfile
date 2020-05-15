@@ -10,7 +10,7 @@ pipeline {
     stage('Upload to AWS.') {
       steps {
         withAWS(region: 'us-west-2', credentials: 'Nour') {
-          s3Upload(file: 'index.html', bucket: 'nouran.portfolio', path: 'INDEX.html')
+          s3Upload(file: 'index.html', bucket: 'nouran.portfolio', path: 'root.html')
         }
 
         sh 'echo "Hello World"'
